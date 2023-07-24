@@ -63,12 +63,12 @@ isEnabled() => Promise<{ isEnabled: boolean; }>
 ### getCallLogs(...)
 
 ```typescript
-getCallLogs(options: { date?: number; hour?: number; minute?: number; second?: number; }) => Promise<any>
+getCallLogs(options: { fromDateTime: number; toDateTime: number; }) => Promise<any>
 ```
 
-| Param         | Type                                                                             |
-| ------------- | -------------------------------------------------------------------------------- |
-| **`options`** | <code>{ date?: number; hour?: number; minute?: number; second?: number; }</code> |
+| Param         | Type                                                       |
+| ------------- | ---------------------------------------------------------- |
+| **`options`** | <code>{ fromDateTime: number; toDateTime: number; }</code> |
 
 **Returns:** <code>Promise&lt;any&gt;</code>
 

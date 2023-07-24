@@ -2,17 +2,9 @@ import { WebPlugin } from '@capacitor/core';
 
 import type { CapacitorCallLogsPlugin } from './definitions';
 
-export class CapacitorCallLogsWeb
-  extends WebPlugin
-  implements CapacitorCallLogsPlugin
-{
+export class CapacitorCallLogsWeb extends WebPlugin implements CapacitorCallLogsPlugin {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  getCallLogs(_options: {
-    date?: number | undefined;
-    hour?: number | undefined;
-    minute?: number | undefined;
-    second?: number | undefined;
-  }): Promise<any> {
+  getCallLogs(_options: { fromDateTime: number; toDateTime: number }): Promise<any> {
     throw new Error('Method not implemented.');
   }
   checkPermission(): Promise<{ checkPermission: string }> {
